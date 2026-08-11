@@ -22,7 +22,7 @@ export default function Home() {
   }, []);
 
   const copyEmail = () => {
-    navigator.clipboard.writeText('contact@byli4mcorp.fr');
+    navigator.clipboard.writeText('byli4mpro@gmail.com');
     const btn = document.querySelector('.copy-email-btn');
     const feedback = document.getElementById('copyFeedback');
     if (btn && feedback) {
@@ -796,7 +796,7 @@ export default function Home() {
           <h2>PRÊT À TRANSFORMER VOTRE IMAGE</h2>
           <p>Répondons à votre projet en 24h</p>
 
-          <div className="email-display">contact@byli4mcorp.fr</div>
+          <div className="email-display">byli4mpro@gmail.com</div>
           <br />
           <button className="copy-email-btn" onClick={copyEmail}>Copier le mail</button>
           <div className="copy-feedback" id="copyFeedback">Mail copié</div>
