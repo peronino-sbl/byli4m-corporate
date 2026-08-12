@@ -1,5 +1,3 @@
-'use client';
-
 import { articles } from '@/data/articles';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
