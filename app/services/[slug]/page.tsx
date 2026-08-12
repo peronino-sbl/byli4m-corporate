@@ -1,8 +1,6 @@
 import { services } from '@/data/services';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
 export default function ServicePage({ params }: { params: { slug: string } }) {
   const service = services.find((s) => s.slug === params.slug);
@@ -12,8 +10,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', background: '#000' }}>
-      <Header />
+    <div style={{ background: '#000' }}>
       <style>{`
         .service-banner {
           width: 100%;
@@ -211,8 +208,6 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }

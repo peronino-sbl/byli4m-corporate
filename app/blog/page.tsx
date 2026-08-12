@@ -2,13 +2,10 @@
 
 import { articles } from '@/data/articles';
 import Link from 'next/link';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
 export default function BlogPage() {
   return (
-    <div className="root" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <Header />
+    <div style={{ background: '#000' }}>
       <style>{`
         .blog-header {
           background: #000;
@@ -132,7 +129,6 @@ export default function BlogPage() {
           ))}
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

@@ -2,13 +2,10 @@
 
 import { services } from '@/data/services';
 import Link from 'next/link';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
 export default function ServicesPage() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', background: '#000' }}>
-      <Header />
+    <div style={{ background: '#000' }}>
       <style>{`
         .services-header {
           background: #000;
@@ -127,8 +124,6 @@ export default function ServicesPage() {
           ))}
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }
