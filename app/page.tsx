@@ -2,6 +2,8 @@
 
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { articles } from '@/data/articles';
 
 export default function Home() {
   const [currentDelay, setCurrentDelay] = useState('standard');
@@ -589,7 +591,7 @@ export default function Home() {
             <a onClick={() => scrollToSection('pricing')}>Tarifs</a>
             <a onClick={() => scrollToSection('portfolio')}>Portfolio</a>
             <a onClick={() => scrollToSection('contact')}>Contact</a>
-            <a onClick={() => scrollToSection('blog')}>Blog</a>
+            <a style={{ cursor: 'pointer' }} onClick={() => window.location.href = '/blog'}>Blog</a>
           </nav>
         </div>
       </header>
@@ -805,35 +807,24 @@ export default function Home() {
 
       <section className="blog-section scroll-reveal" id="blog" style={{ background: 'transparent', padding: '5rem 2rem' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h2 className="section-title">BLOG</h2>
+          <h2 className="section-title">Blog</h2>
           <div className="blog-grid">
-            <div className="blog-card">
-              <div className="blog-card-image">📹</div>
-              <div className="blog-card-content">
-                <span className="date">15 Août 2026</span>
-                <h3>Réussir Vos Vidéos Réseaux en 2026</h3>
-                <p>Les tendances TikTok et Instagram changent vite. Découvrez les 5 éléments clés pour capter l'attention.</p>
-                <a href="#" className="read-more">Lire →</a>
-              </div>
-            </div>
-            <div className="blog-card">
-              <div className="blog-card-image">✨</div>
-              <div className="blog-card-content">
-                <span className="date">10 Août 2026</span>
-                <h3>Motion Design : Pourquoi ça Fait Vendre</h3>
-                <p>Les vidéos animées engagent 3x plus. Comment les intégrer à votre stratégie pour vraiment performer.</p>
-                <a href="#" className="read-more">Lire →</a>
-              </div>
-            </div>
-            <div className="blog-card">
-              <div className="blog-card-image">🎬</div>
-              <div className="blog-card-content">
-                <span className="date">5 Août 2026</span>
-                <h3>Du Concept À La Livraison</h3>
-                <p>Notre processus complet, du brief initial à une vidéo prête à conquérir vos clients sur tous les réseaux.</p>
-                <a href="#" className="read-more">Lire →</a>
-              </div>
-            </div>
+            {articles.slice(0, 3).map((article) => (
+              <Link key={article.id} href={`/blog/${article.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="blog-card">
+                  <img src={article.image} alt={article.title} style={{ width: '100%', height: '200px', objectFit: 'cover', borderBottom: '2px solid var(--accent)' }} />
+                  <div className="blog-card-content">
+                    <span className="date">{new Date(article.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                    <h3>{article.title}</h3>
+                    <p>{article.excerpt}</p>
+                    <a href={`/blog/${article.slug}`} className="read-more" style={{ marginTop: 'auto', display: 'block' }}>Lire →</a>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div style={{ textAlign: 'center', marginTop: '40px' }}>
+            <Link href="/blog" style={{ display: 'inline-block', padding: '12px 30px', background: 'var(--accent)', color: 'var(--bg)', textDecoration: 'none', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', borderRadius: '4px', transition: 'var(--transition)' }} onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--accent-dark)')} onMouseLeave={(e) => (e.currentTarget.style.background = 'var(--accent)')}>Voir tous les articles</Link>
           </div>
         </div>
       </section>
