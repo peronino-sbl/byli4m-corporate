@@ -1,11 +1,11 @@
 'use client';
 
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 interface ServiceData {
   title: string;
   image: string;
-  content: JSX.Element;
+  content: ReactNode;
 }
 
 const services: { [key: string]: ServiceData } = {
