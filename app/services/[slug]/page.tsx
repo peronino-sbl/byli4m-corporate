@@ -1,11 +1,16 @@
 'use client';
 
-export default function ServicePage({ params }: { params: { slug: string } }) {
-  // Récupère le slug de l'URL
-  const slug = params?.slug || 'service';
-
-  // Mappe chaque slug à son contenu
-  const videoImmobiliereContent = `Incarner vos équipes, sublimer vos biens et déclencher le coup de cœur
+export default function ServicePage() {
+  return (
+    <div style={{ background: '#000', color: '#fff', padding: '60px 20px' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'flex-start' }}>
+          <div>
+            <h1 style={{ fontSize: '2.5em', fontWeight: 700, marginBottom: '30px', textTransform: 'uppercase', letterSpacing: '-1px', color: '#00d9ff' }}>
+              Vidéo immobilière
+            </h1>
+            <p style={{ fontSize: '1.05em', color: '#b0b0b0', lineHeight: 1.8, marginBottom: '40px', whiteSpace: 'pre-wrap' }}>
+Incarner vos équipes, sublimer vos biens et déclencher le coup de cœur
 
 Dans un marché saturé de photos grand-angle sans âme et de visites virtuelles générées par IA, l'immobilier reste avant tout une aventure humaine et émotionnelle. Une vidéo immobilière réussie ne se contente pas de lister des mètres carrés : elle raconte l'histoire d'un lieu, met en lumière le savoir-faire de votre agence et crée une connexion immédiate avec vos futurs acheteurs.
 
@@ -54,30 +59,7 @@ Un investissement rentable pour accélérer vos transactions
 
 La vidéo n'est pas une dépense marketing gadget, c'est un accélérateur de business. En combinant storytelling humain et esthétique visuelle, vous marquez les esprits, gagnez des mandats plus facilement et vendez plus rapidement.
 
-Vous souhaitez moderniser l'image de votre agence ou sublimer un mandat d'exception ?`;
-
-  const titles: { [key: string]: string } = {
-    'video-immobiliere': 'Vidéo immobilière',
-    'interviews-temoignages': 'Interviews et témoignages',
-    'video-corporate': 'Vidéo corporate',
-    'motion-design-corporate': 'Motion design corporate',
-    'video-evenementiel': 'Vidéo événementiel',
-    'video-automobile': 'Vidéo automobile',
-  };
-
-  const title = titles[slug] || slug.replace(/-/g, ' ').toUpperCase();
-  const content = slug === 'video-immobiliere' ? videoImmobiliereContent : `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`;
-
-  return (
-    <div style={{ background: '#000', color: '#fff', padding: '60px 20px' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'flex-start' }}>
-          <div>
-            <h1 style={{ fontSize: '2.5em', fontWeight: 700, marginBottom: '30px', textTransform: 'uppercase', letterSpacing: '-1px', color: '#00d9ff' }}>
-              {title}
-            </h1>
-            <p style={{ fontSize: '1.05em', color: '#b0b0b0', lineHeight: 1.8, marginBottom: '40px', whiteSpace: 'pre-wrap' }}>
-              {content}
+Vous souhaitez moderniser l'image de votre agence ou sublimer un mandat d'exception ?
             </p>
             <a href="mailto:byli4mpro@gmail.com" style={{ display: 'inline-block', padding: '15px 35px', background: '#00d9ff', color: '#000', textDecoration: 'none', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', borderRadius: '4px', fontSize: '0.95em', cursor: 'pointer' }}>
               Demander un devis gratuit
@@ -85,7 +67,7 @@ Vous souhaitez moderniser l'image de votre agence ou sublimer un mandat d'except
           </div>
 
           <div style={{ aspectRatio: '1 / 1', background: '#1a1a1a', border: '2px solid #00d9ff', borderRadius: '4px', overflow: 'hidden', position: 'sticky', top: '100px' }}>
-            <img src="/shalev-cohen-QKZdcN15Cog-unsplash.jpg" alt={title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/shalev-cohen-QKZdcN15Cog-unsplash.jpg" alt="Vidéo immobilière" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
         </div>
       </div>
