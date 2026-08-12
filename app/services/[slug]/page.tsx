@@ -1,3 +1,5 @@
+'use client';
+
 const serviceContent: { [key: string]: { title: string; content: string } } = {
   'video-immobiliere': {
     title: 'Vidéo immobilière',
@@ -65,7 +67,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
   };
 
   const title = serviceNames[params.slug] || 'Service';
-  const content = serviceContent[params.slug] || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+  const content = serviceContent[params.slug as keyof typeof serviceContent]?.content || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
 
   return (
     <div style={{ background: '#000', color: '#fff', padding: '60px 20px' }}>
@@ -79,7 +81,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             <div style={{ fontSize: '1.05em', color: '#b0b0b0', lineHeight: 1.8, marginBottom: '40px', whiteSpace: 'pre-wrap' }}>
               {content}
             </div>
-            <a href="mailto:byli4mpro@gmail.com" style={{ display: 'inline-block', padding: '15px 35px', background: '#00d9ff', color: '#000', textDecoration: 'none', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', borderRadius: '4px', fontSize: '0.95em', transition: 'all 0.3s' }} onMouseEnter={(e) => (e.currentTarget.style.background = '#0066cc')} onMouseLeave={(e) => (e.currentTarget.style.background = '#00d9ff')}>
+            <a href="mailto:byli4mpro@gmail.com" style={{ display: 'inline-block', padding: '15px 35px', background: '#00d9ff', color: '#000', textDecoration: 'none', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', borderRadius: '4px', fontSize: '0.95em', cursor: 'pointer' }}>
               Demander un devis gratuit
             </a>
           </div>
