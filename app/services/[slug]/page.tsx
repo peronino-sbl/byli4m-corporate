@@ -24,17 +24,18 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           display: block;
         }
         .service-header-section {
-          background: linear-gradient(135deg, #00d9ff 0%, #0066cc 100%);
+          background: #000;
           color: white;
-          padding: 60px 20px;
+          padding: 40px 20px;
           text-align: center;
+          border-bottom: 2px solid #00d9ff;
         }
         .service-header-section h1 {
-          font-size: 2.5em;
+          font-size: 2em;
           font-weight: 700;
-          margin-bottom: 15px;
+          margin-bottom: 0;
           text-transform: uppercase;
-          letter-spacing: -1px;
+          letter-spacing: -0.5px;
         }
         .service-content-container {
           max-width: 900px;

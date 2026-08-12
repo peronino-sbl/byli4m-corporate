@@ -36,7 +36,7 @@ export const services: Service[] = [
     ],
     price: 'À partir de 550€',
     image: '/shalev-cohen-QKZdcN15Cog-unsplash.jpg',
-    icon: '🏠',
+    icon: '',
   },
   {
     id: '2',
@@ -61,7 +61,7 @@ export const services: Service[] = [
     ],
     price: 'À partir de 400€',
     image: '/shalev-cohen-QKZdcN15Cog-unsplash.jpg',
-    icon: '🎤',
+    icon: '',
   },
   {
     id: '3',

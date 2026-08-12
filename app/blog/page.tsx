@@ -10,44 +10,46 @@ export default function BlogPage() {
     <div className="root" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header />
       <style>{`
-        .blog-hero {
-          background: linear-gradient(135deg, #00d9ff 0%, #0066cc 100%);
+        .blog-header {
+          background: #000;
           color: white;
-          padding: 60px 20px;
+          padding: 40px 20px;
           text-align: center;
+          border-bottom: 2px solid #00d9ff;
         }
-        .blog-hero h1 {
-          font-size: 3em;
+        .blog-header h1 {
+          font-size: 2.5em;
           font-weight: 700;
-          margin-bottom: 15px;
+          margin-bottom: 10px;
           text-transform: uppercase;
-          letter-spacing: -1px;
+          letter-spacing: -0.5px;
         }
-        .blog-hero p {
-          font-size: 1.2em;
-          max-width: 600px;
-          margin: 0 auto;
+        .blog-header p {
+          font-size: 1em;
+          color: #b0b0b0;
           font-weight: 500;
         }
         .blog-container {
           max-width: 1200px;
           margin: 0 auto;
           padding: 60px 20px;
+          background: #000;
         }
         .articles-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-          gap: 40px;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 25px;
         }
         .article-card {
-          background: white;
+          background: #1a1a1a;
           border: 2px solid #00d9ff;
           overflow: hidden;
           transition: all 0.3s ease;
           text-decoration: none;
-          color: #333;
+          color: #fff;
           display: flex;
           flex-direction: column;
+          aspect-ratio: 1 / 1;
         }
         .article-card:hover {
           border-color: #0066cc;
@@ -56,70 +58,57 @@ export default function BlogPage() {
         }
         .article-image {
           width: 100%;
-          height: 250px;
+          height: 55%;
           object-fit: cover;
           background: #f0f0f0;
         }
         .article-content {
-          padding: 25px;
+          padding: 15px;
           flex-grow: 1;
           display: flex;
           flex-direction: column;
-        }
-        .article-meta {
-          display: flex;
-          gap: 15px;
-          margin-bottom: 15px;
-          font-size: 0.85em;
-          color: #666;
-        }
-        .article-category {
-          background: #f0f4ff;
-          color: #0066cc;
-          padding: 4px 10px;
-          border-radius: 3px;
-          font-weight: 600;
-          text-transform: capitalize;
+          justify-content: space-between;
         }
         .article-card h3 {
-          font-size: 1.3em;
-          color: #000;
-          margin: 12px 0;
+          font-size: 0.95em;
+          color: #00d9ff;
+          margin: 0 0 10px 0;
           font-weight: 700;
-          line-height: 1.4;
-          flex-grow: 1;
+          line-height: 1.3;
+        }
+        .article-card:hover h3 {
+          color: #0066cc;
         }
         .article-excerpt {
-          color: #666;
-          font-size: 0.95em;
-          line-height: 1.6;
-          margin-bottom: 15px;
+          color: #b0b0b0;
+          font-size: 0.8em;
+          line-height: 1.4;
+          margin-bottom: 10px;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
         .article-footer {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding-top: 15px;
-          border-top: 1px solid #eee;
-          font-size: 0.85em;
-          color: #999;
+          font-size: 0.75em;
+          color: #666;
         }
         .read-more {
           color: #00d9ff;
           font-weight: 700;
           text-transform: uppercase;
-          letter-spacing: 0.5px;
+          letter-spacing: 0.3px;
           transition: all 0.3s;
+          font-size: 0.8em;
         }
         .article-card:hover .read-more {
           color: #0066cc;
-          transform: translateX(3px);
         }
       `}</style>
 
-      <div className="blog-hero">
+      <div className="blog-header">
         <h1>Blog</h1>
-        <p>Conseils, stratégies et guides pour transformer votre communication audiovisuelle</p>
+        <p>Conseils et stratégies pour votre communication audiovisuelle</p>
       </div>
 
       <div className="blog-container">

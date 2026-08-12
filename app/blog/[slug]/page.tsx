@@ -19,7 +19,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       <style>{`
         .article-banner {
           width: 100%;
-          height: 400px;
+          height: 300px;
           object-fit: cover;
           display: block;
         }

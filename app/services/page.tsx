@@ -10,23 +10,23 @@ export default function ServicesPage() {
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', background: '#000' }}>
       <Header />
       <style>{`
-        .services-hero {
-          background: linear-gradient(135deg, #00d9ff 0%, #0066cc 100%);
+        .services-header {
+          background: #000;
           color: white;
-          padding: 60px 20px;
+          padding: 40px 20px;
           text-align: center;
+          border-bottom: 2px solid #00d9ff;
         }
-        .services-hero h1 {
-          font-size: 3em;
+        .services-header h1 {
+          font-size: 2.5em;
           font-weight: 700;
-          margin-bottom: 15px;
+          margin-bottom: 10px;
           text-transform: uppercase;
-          letter-spacing: -1px;
+          letter-spacing: -0.5px;
         }
-        .services-hero p {
-          font-size: 1.2em;
-          max-width: 600px;
-          margin: 0 auto;
+        .services-header p {
+          font-size: 1em;
+          color: #b0b0b0;
           font-weight: 500;
         }
         .services-container {
@@ -58,8 +58,8 @@ export default function ServicesPage() {
           background: #242424;
         }
         .service-icon {
-          font-size: 3em;
-          margin-bottom: 15px;
+          font-size: 0;
+          margin-bottom: 0;
         }
         .service-card h3 {
           font-size: 1.3em;
@@ -109,9 +109,9 @@ export default function ServicesPage() {
         }
       `}</style>
 
-      <div className="services-hero">
+      <div className="services-header">
         <h1>Services</h1>
-        <p>Nos solutions vidéo adaptées à votre secteur d'activité</p>
+        <p>Solutions vidéo adaptées à votre secteur d'activité</p>
       </div>
 
       <div className="services-container">
