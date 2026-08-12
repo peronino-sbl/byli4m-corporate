@@ -3,6 +3,8 @@
 import { articles } from '@/data/articles';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export default function ArticlePage({ params }: { params: { slug: string } }) {
   const article = articles.find((a) => a.slug === params.slug);
@@ -12,7 +14,8 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div className="root">
+    <div className="root" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <Header />
       <style>{`
         .article-banner {
           width: 100%;
@@ -160,6 +163,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           <a href="mailto:byli4mpro@gmail.com" className="cta-button">Demander un devis gratuit</a>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

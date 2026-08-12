@@ -2,10 +2,13 @@
 
 import { articles } from '@/data/articles';
 import Link from 'next/link';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export default function BlogPage() {
   return (
-    <div className="root">
+    <div className="root" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <Header />
       <style>{`
         .blog-hero {
           background: linear-gradient(135deg, #00d9ff 0%, #0066cc 100%);
@@ -140,6 +143,7 @@ export default function BlogPage() {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
