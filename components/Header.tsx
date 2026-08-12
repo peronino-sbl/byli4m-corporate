@@ -2,7 +2,30 @@
 
 import Link from 'next/link';
 
+const navItemStyle = {
+  color: '#fff',
+  textDecoration: 'none',
+  fontWeight: 600,
+  fontSize: '0.9rem',
+  textTransform: 'uppercase' as const,
+  letterSpacing: '0.5px',
+  transition: 'all 0.3s',
+  paddingBottom: '4px',
+  borderBottom: '2px solid transparent',
+  cursor: 'pointer',
+};
+
 export default function Header() {
+  const handleMouseEnter = (e: React.MouseEvent<HTMLElement>) => {
+    e.currentTarget.style.color = '#00d9ff';
+    e.currentTarget.style.borderBottomColor = '#00d9ff';
+  };
+
+  const handleMouseLeave = (e: React.MouseEvent<HTMLElement>) => {
+    e.currentTarget.style.color = '#fff';
+    e.currentTarget.style.borderBottomColor = 'transparent';
+  };
+
   return (
     <header style={{
       position: 'sticky',
@@ -33,10 +56,10 @@ export default function Header() {
           alignItems: 'center',
           flexWrap: 'wrap',
         }}>
-          <Link href="/" style={{ color: '#fff', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.5px', transition: 'all 0.3s', paddingBottom: '4px', borderBottom: '2px solid transparent' }} onMouseEnter={(e) => { e.currentTarget.style.color = '#00d9ff'; e.currentTarget.style.borderBottomColor = '#00d9ff'; }} onMouseLeave={(e) => { e.currentTarget.style.color = '#fff'; e.currentTarget.style.borderBottomColor = 'transparent'; }}>Accueil</Link>
-          <Link href="/services" style={{ color: '#fff', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.5px', transition: 'all 0.3s', paddingBottom: '4px', borderBottom: '2px solid transparent' }} onMouseEnter={(e) => { e.currentTarget.style.color = '#00d9ff'; e.currentTarget.style.borderBottomColor = '#00d9ff'; }} onMouseLeave={(e) => { e.currentTarget.style.color = '#fff'; e.currentTarget.style.borderBottomColor = 'transparent'; }}>Services</Link>
-          <Link href="/blog" style={{ color: '#fff', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.5px', transition: 'all 0.3s', paddingBottom: '4px', borderBottom: '2px solid transparent' }} onMouseEnter={(e) => { e.currentTarget.style.color = '#00d9ff'; e.currentTarget.style.borderBottomColor = '#00d9ff'; }} onMouseLeave={(e) => { e.currentTarget.style.color = '#fff'; e.currentTarget.style.borderBottomColor = 'transparent'; }}>Blog</Link>
-          <a href="mailto:byli4mpro@gmail.com" style={{ color: '#fff', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.5px', transition: 'all 0.3s', paddingBottom: '4px', borderBottom: '2px solid transparent', cursor: 'pointer' }} onMouseEnter={(e) => { e.currentTarget.style.color = '#00d9ff'; e.currentTarget.style.borderBottomColor = '#00d9ff'; }} onMouseLeave={(e) => { e.currentTarget.style.color = '#fff'; e.currentTarget.style.borderBottomColor = 'transparent'; }}>Contact</Link>
+          <Link href="/" style={navItemStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Accueil</Link>
+          <Link href="/services" style={navItemStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Services</Link>
+          <Link href="/blog" style={navItemStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Blog</Link>
+          <a href="mailto:byli4mpro@gmail.com" style={navItemStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Contact</a>
         </nav>
       </div>
     </header>
