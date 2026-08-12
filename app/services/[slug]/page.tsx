@@ -1,9 +1,10 @@
 'use client';
 
-const serviceContent: { [key: string]: { title: string; content: string } } = {
-  'video-immobiliere': {
-    title: 'Vidéo immobilière',
-    content: `Incarner vos équipes, sublimer vos biens et déclencher le coup de cœur
+export default function ServicePage({ params }: { params: { slug: string } }) {
+  const slugToContent: { [key: string]: { title: string; text: string } } = {
+    'video-immobiliere': {
+      title: 'Vidéo immobilière',
+      text: `Incarner vos équipes, sublimer vos biens et déclencher le coup de cœur
 
 Dans un marché saturé de photos grand-angle sans âme et de visites virtuelles générées par IA, l'immobilier reste avant tout une aventure humaine et émotionnelle. Une vidéo immobilière réussie ne se contente pas de lister des mètres carrés : elle raconte l'histoire d'un lieu, met en lumière le savoir-faire de votre agence et crée une connexion immédiate avec vos futurs acheteurs.
 
@@ -53,42 +54,49 @@ Un investissement rentable pour accélérer vos transactions
 La vidéo n'est pas une dépense marketing gadget, c'est un accélérateur de business. En combinant storytelling humain et esthétique visuelle, vous marquez les esprits, gagnez des mandats plus facilement et vendez plus rapidement.
 
 Vous souhaitez moderniser l'image de votre agence ou sublimer un mandat d'exception ?`,
-  },
-};
-
-export default function ServicePage({ params }: { params: { slug: string } }) {
-  const serviceNames: { [key: string]: string } = {
-    'video-immobiliere': 'Vidéo immobilière',
-    'interviews-temoignages': 'Interviews et témoignages',
-    'video-corporate': 'Vidéo corporate',
-    'motion-design-corporate': 'Motion design corporate',
-    'video-evenementiel': 'Vidéo événementiel',
-    'video-automobile': 'Vidéo automobile',
+    },
+    'interviews-temoignages': {
+      title: 'Interviews et témoignages',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    'video-corporate': {
+      title: 'Vidéo corporate',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    'motion-design-corporate': {
+      title: 'Motion design corporate',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    'video-evenementiel': {
+      title: 'Vidéo événementiel',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    'video-automobile': {
+      title: 'Vidéo automobile',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
   };
 
-  const title = serviceNames[params.slug] || 'Service';
-  const content = serviceContent[params.slug as keyof typeof serviceContent]?.content || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+  const data = slugToContent[params.slug] || { title: 'Service', text: 'Service non trouvé' };
 
   return (
     <div style={{ background: '#000', color: '#fff', padding: '60px 20px' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'flex-start' }}>
-          {/* Texte à gauche */}
           <div>
             <h1 style={{ fontSize: '2.5em', fontWeight: 700, marginBottom: '30px', textTransform: 'uppercase', letterSpacing: '-1px', color: '#00d9ff' }}>
-              {title}
+              {data.title}
             </h1>
-            <div style={{ fontSize: '1.05em', color: '#b0b0b0', lineHeight: 1.8, marginBottom: '40px', whiteSpace: 'pre-wrap' }}>
-              {content}
-            </div>
-            <a href="mailto:byli4mpro@gmail.com" style={{ display: 'inline-block', padding: '15px 35px', background: '#00d9ff', color: '#000', textDecoration: 'none', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', borderRadius: '4px', fontSize: '0.95em', cursor: 'pointer' }}>
+            <p style={{ fontSize: '1.05em', color: '#b0b0b0', lineHeight: 1.8, marginBottom: '40px', whiteSpace: 'pre-wrap' }}>
+              {data.text}
+            </p>
+            <a href="mailto:byli4mpro@gmail.com" style={{ display: 'inline-block', padding: '15px 35px', background: '#00d9ff', color: '#000', textDecoration: 'none', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', borderRadius: '4px', fontSize: '0.95em' }}>
               Demander un devis gratuit
             </a>
           </div>
 
-          {/* Image carrée à droite */}
-          <div style={{ aspectRatio: '1 / 1', background: '#1a1a1a', border: '2px solid #00d9ff', borderRadius: '4px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'sticky', top: '100px' }}>
-            <img src="/shalev-cohen-QKZdcN15Cog-unsplash.jpg" alt={title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <div style={{ aspectRatio: '1 / 1', background: '#1a1a1a', border: '2px solid #00d9ff', borderRadius: '4px', overflow: 'hidden', position: 'sticky', top: '100px' }}>
+            <img src="/shalev-cohen-QKZdcN15Cog-unsplash.jpg" alt={data.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
         </div>
       </div>
