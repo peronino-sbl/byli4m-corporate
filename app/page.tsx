@@ -100,38 +100,6 @@ export default function Home() {
           color: var(--text);
           line-height: 1.6;
         }
-        header {
-          position: sticky;
-          top: 0;
-          z-index: 100;
-          background: rgba(0, 0, 0, 0.98);
-          backdrop-filter: blur(10px);
-          border-bottom: 2px solid var(--accent);
-        }
-        .header-content {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 1rem 1.5rem;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          gap: 2rem;
-        }
-        .logo { height: 45px; display: flex; align-items: center; }
-        .logo img { height: 45px; width: auto; }
-        nav { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
-        nav a {
-          color: var(--text);
-          text-decoration: none;
-          font-weight: 600;
-          font-size: clamp(0.75rem, 2vw, 0.95rem);
-          text-transform: uppercase;
-          letter-spacing: 0.5px;
-          border-bottom: 2px solid transparent;
-          cursor: pointer;
-          transition: var(--transition);
-        }
-        nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(40px); }
           to { opacity: 1; transform: translateY(0); }
@@ -589,21 +557,6 @@ export default function Home() {
           margin-bottom: 0.5rem;
         }
       `}</style>
-
-      <header>
-        <div className="header-content">
-          <div className="logo">
-            <img src="/byli4m.jpeg" alt="Byli4mCorporate" />
-          </div>
-          <nav>
-            <a onClick={() => scrollToSection('services')}>Services</a>
-            <a onClick={() => scrollToSection('pricing')}>Tarifs</a>
-            <a onClick={() => scrollToSection('portfolio')}>Portfolio</a>
-            <a onClick={() => scrollToSection('contact')}>Contact</a>
-            <a style={{ cursor: 'pointer' }} onClick={() => window.location.href = '/blog'}>Blog</a>
-          </nav>
-        </div>
-      </header>
 
       <section className="hero">
         <div className="hero-left">
