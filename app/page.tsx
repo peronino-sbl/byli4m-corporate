@@ -456,27 +456,30 @@ export default function Home() {
         .copy-feedback.show { display: block; }
         .blog-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 1.5rem;
-          max-width: 1200px;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 20px;
+          max-width: 700px;
           margin: 0 auto;
         }
         .blog-card {
-          background: transparent;
+          background: #1a1a1a;
           border: 2px solid var(--accent);
           overflow: hidden;
           transition: var(--transition);
           animation: fadeInUp 0.8s ease-out;
           display: flex;
           flex-direction: column;
+          aspect-ratio: 1 / 1;
         }
         .blog-card:hover {
-          border-color: var(--accent);
+          border-color: #0066cc;
           transform: translateY(-5px);
+          box-shadow: 0 10px 30px rgba(0, 217, 255, 0.2);
         }
         .blog-card-image {
           width: 100%;
-          aspect-ratio: 16/9;
+          height: 55%;
+          object-fit: cover;
           background: var(--bg);
           display: flex;
           align-items: center;
@@ -485,33 +488,39 @@ export default function Home() {
           border-bottom: 2px solid var(--accent);
         }
         .blog-card-content {
-          padding: 1.5rem;
+          padding: 1rem;
           flex-grow: 1;
           display: flex;
           flex-direction: column;
+          justify-content: space-between;
         }
         .blog-card h3 {
-          font-size: clamp(1.1rem, 3vw, 1.3rem);
-          margin-bottom: 0.8rem;
-          color: var(--text);
-          text-transform: uppercase;
+          font-size: 0.9rem;
+          margin: 0.5rem 0;
+          color: var(--accent);
+          text-transform: none;
           font-weight: 700;
           letter-spacing: 0.5px;
+          line-height: 1.3;
         }
         .blog-card .date {
-          font-size: 0.85rem;
-          color: var(--text-muted);
-          margin-bottom: 1rem;
+          font-size: 0.75rem;
+          color: #666;
+          margin-bottom: 0.5rem;
           text-transform: uppercase;
-          letter-spacing: 0.5px;
+          letter-spacing: 0.3px;
           font-weight: 600;
         }
         .blog-card p {
-          color: var(--text-muted);
-          font-size: 0.95rem;
-          line-height: 1.8;
-          flex-grow: 1;
+          color: #b0b0b0;
+          font-size: 0.8rem;
+          line-height: 1.4;
+          margin: 0;
           font-weight: 500;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
         .read-more {
           color: var(--accent);
@@ -610,6 +619,7 @@ export default function Home() {
           </p>
           <div>
             <button className="cta-btn" onClick={() => scrollToSection('contact')}>Commencer un projet</button>
+            <Link href="/services" className="cta-btn secondary" style={{ textDecoration: 'none', display: 'inline-block', color: 'inherit' }}>Voir nos services</Link>
             <button className="cta-btn secondary" onClick={() => scrollToSection('portfolio')}>Voir nos réalisations</button>
           </div>
         </div>

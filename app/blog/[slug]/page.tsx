@@ -6,6 +6,12 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
+export async function generateStaticParams() {
+  return articles.map((article) => ({
+    slug: article.slug,
+  }));
+}
+
 export default function ArticlePage({ params }: { params: { slug: string } }) {
   const article = articles.find((a) => a.slug === params.slug);
 
