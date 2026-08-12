@@ -1,139 +1,178 @@
 'use client';
 
-export default function ServicePage() {
+interface ServiceData {
+  title: string;
+  image: string;
+  content: JSX.Element;
+}
+
+const services: { [key: string]: ServiceData } = {
+  'video-immobiliere': {
+    title: 'Vidéo immobilière',
+    image: '/shalev-cohen-QKZdcN15Cog-unsplash.jpg',
+    content: (
+      <>
+        <h2>Incarner vos équipes, sublimer vos biens et déclencher le coup de cœur</h2>
+        <p>Dans un marché saturé de photos grand-angle sans âme et de visites virtuelles générées par IA, l'immobilier reste avant tout une aventure humaine et émotionnelle. Une vidéo immobilière réussie ne se contente pas de lister des mètres carrés : elle raconte l'histoire d'un lieu, met en lumière le savoir-faire de votre agence et crée une connexion immédiate avec vos futurs acheteurs.</p>
+        <p>Chez byli4m corporate, nous combinons exigence cinématique et proximité terrain pour transformer vos annonces et votre image de marque en vrais leviers de croissance.</p>
+
+        <h2>Pourquoi intégrer la vidéo dans votre stratégie immobilière ?</h2>
+        <p>Aujourd'hui, les acquéreurs et les vendeurs recherchent de la transparence et du vrai. Plutôt que de faire défiler des visuels statiques, la vidéo offre une expérience vivante et engageante.</p>
+        <p style={{ fontWeight: 600 }}>Intégrer la vidéo dans votre communication vous permet de :</p>
+        <ul>
+          <li><strong>Démarcher moins, séduire plus :</strong> Attirez naturellement les propriétaires en leur prouvant que vous investissez réellement dans la mise en valeur de leur bien pour décrocher des mandats exclusifs.</li>
+          <li><strong>Incarner votre agence :</strong> Montrez les visages, la passion et l'accompagnement sur-mesure de vos collaborateurs pour établir une relation de confiance avant même la première rencontre.</li>
+          <li><strong>Gagner un temps précieux :</strong> La vidéo pré-qualifie les acheteurs. Finies les visites inutiles, vous ne faites déplacer que des prospects réellement projetés et séduits.</li>
+        </ul>
+
+        <h2>Les bénéfices concrets pour votre agence</h2>
+        <h3>1. Révéler l'âme des lieux</h3>
+        <p>Grâce à un travail minutieux sur la lumière naturelle, le cadrage et le rythme du montage, nous capturons l'atmosphère unique de chaque bien : la chaleur d'une pièce de vie, la circulation des espaces, les détails architecturaux.</p>
+
+        <h3>2. Une présence forte sur les réseaux sociaux</h3>
+        <p>Les algorithmes d'Instagram (Reels), TikTok et LinkedIn privilégient massivement les formats vidéo verticaux (9:16). Nous créons du contenu dynamique et immersif qui capte l'attention dès les premières secondes.</p>
+
+        <h3>3. Une valeur perçue démultipliée</h3>
+        <p>Proposer une production audiovisuelle léchée à vos clients vendeurs valorise leur patrimoine au juste prix et positionne votre agence comme une référence premium sur votre secteur.</p>
+
+        <h2>Nos formats de vidéos immobilières</h2>
+        <p>Chaque projet a des objectifs précis. Nous concevons différents formats adaptés à votre stratégie :</p>
+        <ul>
+          <li><strong>Le Film "Coup de Cœur"</strong> (Biens d'exception & Exclusivités) : Une immersion cinématique fluide, esthétique et rythmée pour donner envie de visiter instantanément.</li>
+          <li><strong>La Vidéo "Présentation d'Équipe & Inbound"</strong> : Un format court et chaleureux (interview, coulisses, philosophie) pour mettre en avant l'humain derrière l'agence et rassurer vos futurs clients.</li>
+          <li><strong>Le Format Réseaux Sociaux (Reels / Shorts)</strong> : Des vidéos courtes et captivantes présentées par vos agents ou axées sur du storytelling local pour booster votre communauté et votre notoriété de quartier.</li>
+          <li><strong>Les Témoignages Clients</strong> : Donnez la parole à des vendeurs ou acheteurs satisfaits pour créer la meilleure des preuves sociales.</li>
+        </ul>
+
+        <h2>La touche byli4m : Comment nous sublimons vos projets</h2>
+        <p>Pour réaliser une vidéo qui déclenche des ventes et de la confiance, nous misons sur l'artisanat de l'image et du son :</p>
+        <ul>
+          <li><strong>Une mise en scène soignée et naturelle :</strong> Nous travaillons l'ambiance, la lumière et l'agencement pour rendre chaque espace accueillant sans dénaturer la réalité.</li>
+          <li><strong>Une qualité d'image cinématique :</strong> Cadrage stabilisé, objectifs à grande ouverture pour capter la lumière et étalonnage des couleurs sur-mesure pour un rendu haut de gamme.</li>
+          <li><strong>Un montage dynamique et sur-mesure :</strong> Le secret d'une vidéo réussie réside dans son rythme. Nous alternons plans d'ensemble immersifs et détails architecturaux, portés par une musique parfaitement ajustée.</li>
+          <li><strong>Un sound design immersif :</strong> Intégration d'ambiances sonores discrètes et de sous-titres graphiques pour une lecture optimale, même sans le son sur smartphone.</li>
+        </ul>
+
+        <h2>Un investissement rentable pour accélérer vos transactions</h2>
+        <p>La vidéo n'est pas une dépense marketing gadget, c'est un accélérateur de business. En combinant storytelling humain et esthétique visuelle, vous marquez les esprits, gagnez des mandats plus facilement et vendez plus rapidement.</p>
+        <p>Vous souhaitez moderniser l'image de votre agence ou sublimer un mandat d'exception ?</p>
+      </>
+    ),
+  },
+  'interviews-temoignages': {
+    title: 'Interviews & Témoignages vidéo',
+    image: '/austin-distel-Hg3BHX6U5jg-unsplash.jpg',
+    content: (
+      <>
+        <h2>Donner de la voix et du cœur à votre entreprise</h2>
+        <p>À l'heure où les consommateurs et prospects cherchent des preuves de sincérité, les longs discours institutionnels et les arguments marketing abstraits ne suffisent plus. Rien ne vaut l'authenticité d'un visage, d'une voix et d'une histoire vécue.</p>
+        <p>La vidéo d'interview ou de témoignage est le levier le plus puissant pour humaniser votre marque, valoriser vos équipes et rassurer vos futurs clients. Chez byli4m corporate, nous capturons la réalité du terrain avec une approche humaine, fluide et cinématique.</p>
+
+        <h2>Pourquoi intégrer des témoignages et interviews dans votre communication ?</h2>
+        <p>Les individus n'achètent pas seulement un produit ou un service : ils choisissent des personnes en qui ils ont confiance. Une interview bien réalisée transforme une simple présentation en une relation de proximité.</p>
+        <p style={{ fontWeight: 600 }}>Ce format vous permet de :</p>
+        <ul>
+          <li><strong>Déclencher la confiance (Preuve sociale) :</strong> Un client satisfait qui raconte son expérience est mille fois plus persuasif qu'un texte de vente sur un site web.</li>
+          <li><strong>Incarner votre marque employeur :</strong> Donnez la parole à vos collaborateurs pour montrer les coulisses, transmettre vos valeurs et attirer les meilleurs talents.</li>
+          <li><strong>Simplifier vos messages complexes :</strong> Expliquez la valeur ajoutée d'un accompagnement ou d'une solution à travers le regard de ceux qui l'utilisent au quotidien.</li>
+        </ul>
+
+        <h2>Les bénéfices concrets pour votre business</h2>
+        <h3>1. Une crédibilité maximale</h3>
+        <p>Finies les citations textuelles anonymes. Un témoignage vidéo incarné apporte une preuve irréfutable de la qualité de votre travail et lève les hésitations de vos prospects.</p>
+
+        <h3>2. Une connexion émotionnelle forte</h3>
+        <p>Grâce à notre travail sur le rythme, la musique et l'expression des intervenants, nous faisons ressortir la passion de vos équipes et la sincérité de vos clients.</p>
+
+        <h3>3. Un contenu polyvalent & déclinable</h3>
+        <p>Une seule session de tournage peut être découpée en un format long pour votre site internet, et en plusieurs mini-capsules verticales (Reels, TikTok, LinkedIn) pour faire vivre vos réseaux sociaux sur la durée.</p>
+
+        <h2>Nos formats d'interviews et de témoignages</h2>
+        <p>Nous adaptons la mise en scène selon vos objectifs stratégiques :</p>
+        <ul>
+          <li><strong>Le Témoignage Client "Success Story" :</strong> Votre client raconte son problème initial, sa rencontre avec votre entreprise et les résultats concrets obtenus. C'est l'outil de conversion ultime pour vos équipes commerciales.</li>
+          <li><strong>L'Interview Marque Employeur / Coulisses :</strong> Mettez en avant le quotidien de vos équipes, la culture de votre entreprise et les histoires de ceux qui la font tourner pour booster vos recrutements.</li>
+          <li><strong>La Parole d'Expert / Storytelling :</strong> Un format où le dirigeant ou un spécialiste partage sa vision, son savoir-faire et ses conseils pour installer votre leadership sur votre secteur.</li>
+          <li><strong>Le Format Snackable (Capsule Réseaux Sociaux) :</strong> Des formats très courts (15 à 45 secondes) dynamiques, sous-titrés et rythmés, conçus sur-mesure pour capter l'attention sur LinkedIn et Instagram.</li>
+        </ul>
+
+        <h2>La touche byli4m : L'art de mettre à l'aise et de captiver</h2>
+        <p>Réussir une interview ne s'improvise pas. Beaucoup de personnes bloquent ou perdent leur naturel dès que la caméra s'allume. Notre savoir-faire réside dans la préparation et la technique :</p>
+        <ul>
+          <li><strong>Une direction d'intervenant bienveillante :</strong> Nous créons un climat d'échange chaleureux et naturel. Pas de texte appris par cœur : nous guidons la discussion pour obtenir des réponses spontanées, incarnées et fluides.</li>
+          <li><strong>Le dispositif multi-caméra :</strong> Nous filmons sous plusieurs angles complémentaires. Cela apporte un rythme dynamique au montage et permet d'enlever toutes les hésitations ou erreurs sans couper le fil de la pensée.</li>
+          <li><strong>Une prise de son & lumière irréprochables :</strong> Micro-cravates haute fidélité, éclairage doux et retravail du son en post-production pour garantir un rendu digne d'un plateau télé.</li>
+          <li><strong>Habillage graphique & Sous-titres dynamiques :</strong> Ajout de sous-titres animés esthétiques (pour la lecture sans le son sur smartphone), incrustation de votre charte graphique et animations de données clés pour maintenir l'engagement jusqu'à la dernière seconde.</li>
+        </ul>
+
+        <h2>Investissez dans ce qui rassure vraiment vos clients</h2>
+        <p>Qu'il s'agisse de convaincre un prospect hésitant, de valoriser un projet réussi ou de recruter votre futur talent, la vidéo d'interview est l'un des investissements audiovisuels au ROI le plus direct.</p>
+        <p>Prêts à donner la parole à ceux qui font la réussite de votre entreprise ?</p>
+      </>
+    ),
+  },
+};
+
+export default function ServicePage({ params }: { params: { slug: string } }) {
+  const slug = params?.slug || 'service';
+  const service = services[slug];
+
+  if (!service) {
+    return (
+      <div style={{ background: '#000', color: '#fff', padding: '60px 20px', textAlign: 'center' }}>
+        <h1 style={{ color: '#00d9ff' }}>Service non trouvé</h1>
+        <p>La page que vous cherchez n'existe pas.</p>
+      </div>
+    );
+  }
+
   return (
     <div style={{ background: '#000', color: '#fff' }}>
       {/* Bannière image en haut */}
       <div style={{ width: '100%', height: '400px', overflow: 'hidden' }}>
-        <img src="/shalev-cohen-QKZdcN15Cog-unsplash.jpg" alt="Vidéo immobilière" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+        <img src={service.image} alt={service.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       </div>
 
       {/* Contenu SEO-friendly */}
       <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '60px 20px' }}>
         <h1 style={{ fontSize: '2.5em', fontWeight: 700, marginBottom: '30px', textTransform: 'uppercase', letterSpacing: '-1px', color: '#00d9ff' }}>
-          Vidéo immobilière
+          {service.title}
         </h1>
 
-        <h2 style={{ fontSize: '1.8em', fontWeight: 700, marginTop: '40px', marginBottom: '20px', color: '#00d9ff' }}>
-          Incarner vos équipes, sublimer vos biens et déclencher le coup de cœur
-        </h2>
+        <div style={{ fontSize: '1.05em', color: '#b0b0b0', lineHeight: 1.8 }}>
+          {/* Styled content - manually applying h2, h3, p, ul styles */}
+          <style>{`
+            .service-content h2 {
+              font-size: 1.8em;
+              font-weight: 700;
+              margin-top: 40px;
+              margin-bottom: 20px;
+              color: #00d9ff;
+            }
+            .service-content h3 {
+              font-size: 1.3em;
+              font-weight: 700;
+              margin-top: 30px;
+              margin-bottom: 15px;
+              color: #fff;
+            }
+            .service-content p {
+              margin-bottom: 20px;
+            }
+            .service-content ul {
+              margin-bottom: 20px;
+              margin-left: 20px;
+            }
+            .service-content li {
+              margin-bottom: 12px;
+            }
+          `}</style>
+          <div className="service-content">
+            {service.content}
+          </div>
+        </div>
 
-        <p style={{ fontSize: '1.05em', color: '#b0b0b0', lineHeight: 1.8, marginBottom: '20px' }}>
-          Dans un marché saturé de photos grand-angle sans âme et de visites virtuelles générées par IA, l'immobilier reste avant tout une aventure humaine et émotionnelle. Une vidéo immobilière réussie ne se contente pas de lister des mètres carrés : elle raconte l'histoire d'un lieu, met en lumière le savoir-faire de votre agence et crée une connexion immédiate avec vos futurs acheteurs.
-        </p>
-
-        <p style={{ fontSize: '1.05em', color: '#b0b0b0', lineHeight: 1.8, marginBottom: '20px' }}>
-          Chez byli4m corporate, nous combinons exigence cinématique et proximité terrain pour transformer vos annonces et votre image de marque en vrais leviers de croissance.
-        </p>
-
-        <h2 style={{ fontSize: '1.8em', fontWeight: 700, marginTop: '40px', marginBottom: '20px', color: '#00d9ff' }}>
-          Pourquoi intégrer la vidéo dans votre stratégie immobilière ?
-        </h2>
-
-        <p style={{ fontSize: '1.05em', color: '#b0b0b0', lineHeight: 1.8, marginBottom: '20px' }}>
-          Aujourd'hui, les acquéreurs et les vendeurs recherchent de la transparence et du vrai. Plutôt que de faire défiler des visuels statiques, la vidéo offre une expérience vivante et engageante.
-        </p>
-
-        <p style={{ fontSize: '1.05em', color: '#b0b0b0', lineHeight: 1.8, marginBottom: '20px', fontWeight: 600 }}>
-          Intégrer la vidéo dans votre communication vous permet de :
-        </p>
-
-        <ul style={{ fontSize: '1.05em', color: '#b0b0b0', lineHeight: 1.8, marginBottom: '20px', marginLeft: '20px' }}>
-          <li style={{ marginBottom: '12px' }}>
-            <strong>Démarcher moins, séduire plus :</strong> Attirez naturellement les propriétaires en leur prouvant que vous investissez réellement dans la mise en valeur de leur bien pour décrocher des mandats exclusifs.
-          </li>
-          <li style={{ marginBottom: '12px' }}>
-            <strong>Incarner votre agence :</strong> Montrez les visages, la passion et l'accompagnement sur-mesure de vos collaborateurs pour établir une relation de confiance avant même la première rencontre.
-          </li>
-          <li style={{ marginBottom: '12px' }}>
-            <strong>Gagner un temps précieux :</strong> La vidéo pré-qualifie les acheteurs. Finies les visites inutiles, vous ne faites déplacer que des prospects réellement projetés et séduits.
-          </li>
-        </ul>
-
-        <h2 style={{ fontSize: '1.8em', fontWeight: 700, marginTop: '40px', marginBottom: '20px', color: '#00d9ff' }}>
-          Les bénéfices concrets pour votre agence
-        </h2>
-
-        <h3 style={{ fontSize: '1.3em', fontWeight: 700, marginTop: '30px', marginBottom: '15px', color: '#fff' }}>
-          1. Révéler l'âme des lieux
-        </h3>
-        <p style={{ fontSize: '1.05em', color: '#b0b0b0', lineHeight: 1.8, marginBottom: '20px' }}>
-          Grâce à un travail minutieux sur la lumière naturelle, le cadrage et le rythme du montage, nous capturons l'atmosphère unique de chaque bien : la chaleur d'une pièce de vie, la circulation des espaces, les détails architecturaux.
-        </p>
-
-        <h3 style={{ fontSize: '1.3em', fontWeight: 700, marginTop: '30px', marginBottom: '15px', color: '#fff' }}>
-          2. Une présence forte sur les réseaux sociaux
-        </h3>
-        <p style={{ fontSize: '1.05em', color: '#b0b0b0', lineHeight: 1.8, marginBottom: '20px' }}>
-          Les algorithmes d'Instagram (Reels), TikTok et LinkedIn privilégient massivement les formats vidéo verticaux (9:16). Nous créons du contenu dynamique et immersif qui capte l'attention dès les premières secondes.
-        </p>
-
-        <h3 style={{ fontSize: '1.3em', fontWeight: 700, marginTop: '30px', marginBottom: '15px', color: '#fff' }}>
-          3. Une valeur perçue démultipliée
-        </h3>
-        <p style={{ fontSize: '1.05em', color: '#b0b0b0', lineHeight: 1.8, marginBottom: '20px' }}>
-          Proposer une production audiovisuelle léchée à vos clients vendeurs valorise leur patrimoine au juste prix et positionne votre agence comme une référence premium sur votre secteur.
-        </p>
-
-        <h2 style={{ fontSize: '1.8em', fontWeight: 700, marginTop: '40px', marginBottom: '20px', color: '#00d9ff' }}>
-          Nos formats de vidéos immobilières
-        </h2>
-
-        <p style={{ fontSize: '1.05em', color: '#b0b0b0', lineHeight: 1.8, marginBottom: '20px' }}>
-          Chaque projet a des objectifs précis. Nous concevons différents formats adaptés à votre stratégie :
-        </p>
-
-        <ul style={{ fontSize: '1.05em', color: '#b0b0b0', lineHeight: 1.8, marginBottom: '20px', marginLeft: '20px' }}>
-          <li style={{ marginBottom: '12px' }}>
-            <strong>Le Film "Coup de Cœur"</strong> (Biens d'exception & Exclusivités) : Une immersion cinématique fluide, esthétique et rythmée pour donner envie de visiter instantanément.
-          </li>
-          <li style={{ marginBottom: '12px' }}>
-            <strong>La Vidéo "Présentation d'Équipe & Inbound"</strong> : Un format court et chaleureux (interview, coulisses, philosophie) pour mettre en avant l'humain derrière l'agence et rassurer vos futurs clients.
-          </li>
-          <li style={{ marginBottom: '12px' }}>
-            <strong>Le Format Réseaux Sociaux (Reels / Shorts)</strong> : Des vidéos courtes et captivantes présentées par vos agents ou axées sur du storytelling local pour booster votre communauté et votre notoriété de quartier.
-          </li>
-          <li style={{ marginBottom: '12px' }}>
-            <strong>Les Témoignages Clients</strong> : Donnez la parole à des vendeurs ou acheteurs satisfaits pour créer la meilleure des preuves sociales.
-          </li>
-        </ul>
-
-        <h2 style={{ fontSize: '1.8em', fontWeight: 700, marginTop: '40px', marginBottom: '20px', color: '#00d9ff' }}>
-          La touche byli4m : Comment nous sublimons vos projets
-        </h2>
-
-        <p style={{ fontSize: '1.05em', color: '#b0b0b0', lineHeight: 1.8, marginBottom: '20px' }}>
-          Pour réaliser une vidéo qui déclenche des ventes et de la confiance, nous misons sur l'artisanat de l'image et du son :
-        </p>
-
-        <ul style={{ fontSize: '1.05em', color: '#b0b0b0', lineHeight: 1.8, marginBottom: '20px', marginLeft: '20px' }}>
-          <li style={{ marginBottom: '12px' }}>
-            <strong>Une mise en scène soignée et naturelle :</strong> Nous travaillons l'ambiance, la lumière et l'agencement pour rendre chaque espace accueillant sans dénaturer la réalité.
-          </li>
-          <li style={{ marginBottom: '12px' }}>
-            <strong>Une qualité d'image cinématique :</strong> Cadrage stabilisé, objectifs à grande ouverture pour capter la lumière et étalonnage des couleurs sur-mesure pour un rendu haut de gamme.
-          </li>
-          <li style={{ marginBottom: '12px' }}>
-            <strong>Un montage dynamique et sur-mesure :</strong> Le secret d'une vidéo réussie réside dans son rythme. Nous alternons plans d'ensemble immersifs et détails architecturaux, portés par une musique parfaitement ajustée.
-          </li>
-          <li style={{ marginBottom: '12px' }}>
-            <strong>Un sound design immersif :</strong> Intégration d'ambiances sonores discrètes et de sous-titres graphiques pour une lecture optimale, même sans le son sur smartphone.
-          </li>
-        </ul>
-
-        <h2 style={{ fontSize: '1.8em', fontWeight: 700, marginTop: '40px', marginBottom: '20px', color: '#00d9ff' }}>
-          Un investissement rentable pour accélérer vos transactions
-        </h2>
-
-        <p style={{ fontSize: '1.05em', color: '#b0b0b0', lineHeight: 1.8, marginBottom: '20px' }}>
-          La vidéo n'est pas une dépense marketing gadget, c'est un accélérateur de business. En combinant storytelling humain et esthétique visuelle, vous marquez les esprits, gagnez des mandats plus facilement et vendez plus rapidement.
-        </p>
-
-        <p style={{ fontSize: '1.05em', color: '#b0b0b0', lineHeight: 1.8, marginBottom: '40px' }}>
-          Vous souhaitez moderniser l'image de votre agence ou sublimer un mandat d'exception ?
-        </p>
-
-        <a href="mailto:byli4mpro@gmail.com" style={{ display: 'inline-block', padding: '15px 35px', background: '#00d9ff', color: '#000', textDecoration: 'none', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', borderRadius: '4px', fontSize: '0.95em', cursor: 'pointer' }}>
+        <a href="mailto:byli4mpro@gmail.com" style={{ display: 'inline-block', padding: '15px 35px', background: '#00d9ff', color: '#000', textDecoration: 'none', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', borderRadius: '4px', fontSize: '0.95em', cursor: 'pointer', marginTop: '40px' }}>
           Demander un devis gratuit
         </a>
       </div>
