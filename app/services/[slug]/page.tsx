@@ -134,12 +134,6 @@ export default function ServicePage() {
           <h3>4. Et pour la diffusion ? On vous aide !</h3>
           <p>Créer de superbes vidéos ne sert à rien si elles restent dans un dossier sur votre ordinateur. Nous vous fournissons des fichiers prêts à l'emploi et parfaitement optimisés (formats verticaux pour Reels/TikTok/Shorts, formats carrés ou horizontaux pour LinkedIn et votre site). Et si vous ne savez pas comment les publier ou rédiger vos accroches, nous pouvons vous accompagner pour structurer votre calendrier de diffusion.</p>
 
-          <h2>Les bonus qui boostent votre visibilité</h2>
-          <ul>
-            <li><strong>Un coup de projecteur sur notre communauté :</strong> Vous souhaitez toucher une large audience immédiatement ? Nous pouvons co-publier vos vidéos (crosspost) sur notre compte Instagram suivi par plus de 190 000 abonnés.</li>
-            <li><strong>Rejoignez un réseau qui vous ressemble :</strong> En travaillant avec nous, vous intégrez un écosystème d'entrepreneurs et de créateurs qui partagent les mêmes valeurs d'exigence, de sincérité et de croissance.</li>
-          </ul>
-
           <h2>Prêt(e) à révéler votre vrai potentiel en vidéo ?</h2>
           <p>Il est temps de mettre un visage sur votre expertise et d'attirer les projets que vous méritez vraiment.</p>
           <p>Parlons de vos idées, de votre positionnement et de vos prochaines vidéos autour d'un échange direct.</p>
