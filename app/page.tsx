@@ -577,16 +577,18 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-right">
-          <iframe
-            width="100%"
-            height="600"
-            src="https://www.instagram.com/reel/DO8uC2QCAWT/embed/"
-            frameBorder="0"
-            scrolling="no"
-            allowTransparency={true}
-            style={{ border: '2px solid var(--accent)', maxWidth: '100%' }}
-          />
+        <div className="hero-right" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={{ aspectRatio: '9/16', maxWidth: '400px', width: '100%' }}>
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.instagram.com/reel/DO8uC2QCAWT/embed/"
+              frameBorder="0"
+              scrolling="no"
+              allowTransparency={true}
+              style={{ border: '2px solid var(--accent)', display: 'block' }}
+            />
+          </div>
         </div>
       </section>
 
