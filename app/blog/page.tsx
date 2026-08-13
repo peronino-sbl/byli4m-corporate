@@ -97,7 +97,33 @@ export default function BlogPage() {
         }
         .article-footer {
           font-size: 0.75em;
-          color: #666;
+          color: #888;
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+        .article-footer span:not(:first-child)::before {
+          content: '•';
+          margin-right: 1rem;
+          color: #00d9ff;
+        }
+        .article-meta {
+          display: flex;
+          gap: 0.8rem;
+          margin-bottom: 0.8rem !important;
+          flex-wrap: wrap;
+          font-size: 0.75em !important;
+        }
+        .article-category {
+          background: #00d9ff;
+          color: #000 !important;
+          padding: 4px 8px;
+          border-radius: 3px;
+          font-weight: 700;
+          font-size: 0.7em;
+          text-transform: uppercase;
+          letter-spacing: 0.3px;
         }
         .read-more {
           color: #00d9ff;

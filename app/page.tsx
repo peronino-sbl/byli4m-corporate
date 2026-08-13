@@ -481,12 +481,23 @@ export default function Home() {
           line-height: 1.3;
         }
         .blog-card .date {
-          font-size: 0.75rem;
-          color: #666;
-          margin-bottom: 0.5rem;
+          font-size: 0.7rem;
+          color: #888;
+          margin-bottom: 0.8rem;
           text-transform: uppercase;
-          letter-spacing: 0.3px;
+          letter-spacing: 0.5px;
           font-weight: 600;
+          display: flex;
+          gap: 0.8rem;
+          align-items: center;
+        }
+        .blog-card .date span {
+          display: inline-block;
+        }
+        .blog-card .date span:not(:first-child)::before {
+          content: '•';
+          margin-right: 0.8rem;
+          color: #00d9ff;
         }
         .blog-card p {
           color: #b0b0b0;
