@@ -146,4 +146,79 @@ export const articles: Article[] = [
 
 <p>Peu importe votre choix, <strong>commencez cette semaine</strong>. Chaque jour sans vidéo, c'est un mandat qui part chez le concurrent.</p>`,
   },
+  {
+    id: '2',
+    slug: 'marque-personnelle-indepandants-video',
+    title: 'Personal Branding pour indépendants : Devenez la référence de votre secteur grâce à la vidéo',
+    metaDescription: 'Découvrez comment construire votre marque personnelle en vidéo pour attirer les bons clients et assoir votre autorité. Guide complet du personal branding pour indépendants.',
+    excerpt: 'Quand on est indépendant, les clients achètent une personne. Découvrez comment la vidéo transforme votre présence et votre crédibilité.',
+    image: '/shalev-cohen-QKZdcN15Cog-unsplash.jpg',
+    date: '2026-08-13',
+    author: 'Byli4m Corporate',
+    readTime: 10,
+    category: 'Personal Branding',
+    keywords: ['personal branding', 'marque personnelle', 'indépendant vidéo', 'consultant autorité', 'contenu vidéo LinkedIn', 'personal branding video'],
+    content: `<h2>Personal Branding pour indépendants : Devenez la référence de votre secteur</h2>
+
+<p>Quand on est indépendant, consultant ou fondateur d'entreprise, les clients n'achètent pas seulement une prestation : ils achètent une personne. Ils choisissent votre vision, votre énergie, votre façon d'expliquer les choses et la confiance que vous leur inspirez.</p>
+
+<p>Pourtant, la plupart des indépendants restent invisibles ou se cachent derrière des posts textuels anonymes. C'est dommage : le <strong>Personal Branding en vidéo</strong> est aujourd'hui le moyen le plus rapide d'assoir son autorité, d'attirer les bons clients et de ne plus jamais avoir à se brader.</p>
+
+<p>Chez <strong>byli4m corporate</strong>, nous créons du contenu vidéo incarné, esthétique et percutant pour révéler votre personnalité et propulser votre activité.</p>
+
+<h2>Pourquoi travailler sa marque personnelle quand on est indépendant ?</h2>
+
+<p>Prendre la parole en vidéo sur ses réseaux sociaux et son site web ne sert pas à faire le "show", mais à bâtir des fondations commerciales solides :</p>
+
+<h3>Inspirer une confiance immédiate</h3>
+
+<p>La vidéo permet à vos futurs clients de vous voir, de vous entendre et d'apprendre à vous connaître avant même le premier contact. Quand ils vous appellent, le contrat est déjà à moitié vendu.</p>
+
+<h3>Stop à la pige et la prospection à chaud</h3>
+
+<p>En partageant régulièrement vos conseils, vos réflexions et vos coulisses, vous attirez naturellement à vous des prospects déjà convaincus (Inbound Marketing).</p>
+
+<h3>Affirmer sa singularité et ses tarifs</h3>
+
+<p>Vos compétences peuvent être comparées à celles d'un concurrent, mais votre personnalité est unique. Incarner son offre permet de sortir définitivement de la guerre des prix par le haut.</p>
+
+<h3>Se créer un patrimoine de marque</h3>
+
+<p>Chaque vidéo produite devient un actif réutilisable sur LinkedIn, Instagram, votre site web ou dans vos propositions commerciales pendant des mois.</p>
+
+<h2>Notre accompagnement : Du sur-mesure, sans prise de tête</h2>
+
+<p>Pas besoin d'y passer vos journées ni de devenir un expert technique. Notre rôle est de vous mettre dans les meilleures conditions pour faire ressortir le meilleur de vous-même.</p>
+
+<h3>1. La Ligne Éditoriale & La Stratégie</h3>
+
+<p>On prend le temps de vous connaître. Lors d'un échange préalable, on creuse votre univers, vos forces et vos objectifs. On définit un positionnement clair et une liste de sujets percutants qui parlent directement aux problèmes de vos clients idéaux.</p>
+
+<h3>2. Le Tournage Immersif & Guidé</h3>
+
+<p>C'est le moment de capter votre authenticité. Que ce soit chez vous, dans vos bureaux ou dans le cadre de votre choix, nous venons avec notre matériel professionnel (caméras, micros haute fidélité, lumières). Notre plus grande force ? Vous mettre à l'aise. On vous guide, on échange de façon naturelle, et on efface tout le stress de la caméra.</p>
+
+<h3>3. La Post-Production Cinématique</h3>
+
+<p>C'est là que la magie opère. Nous tricotons vos prises de parole pour leur donner un rythme dynamique : coupes fluides, sous-titres animés et esthétiques (indispensables pour la lecture sans le son sur smartphone), étalonnage des couleurs et habillage sonore soigné.</p>
+
+<h3>4. Et pour la diffusion ? On vous aide !</h3>
+
+<p>Créer de superbes vidéos ne sert à rien si elles restent dans un dossier sur votre ordinateur. Nous vous fournissons des fichiers prêts à l'emploi et parfaitement optimisés (formats verticaux pour Reels/TikTok/Shorts, formats carrés ou horizontaux pour LinkedIn et votre site). Et si vous ne savez pas comment les publier ou rédiger vos accroches, nous pouvons vous accompagner pour structurer votre calendrier de diffusion.</p>
+
+<h2>Les bonus qui boostent votre visibilité</h2>
+
+<ul>
+<li><strong>Un coup de projecteur sur notre communauté :</strong> Vous souhaitez toucher une large audience immédiatement ? Nous pouvons co-publier vos vidéos (crosspost) sur notre compte Instagram suivi par plus de 190 000 abonnés.</li>
+<li><strong>Rejoignez un réseau qui vous ressemble :</strong> En travaillant avec nous, vous intégrez un écosystème d'entrepreneurs et de créateurs qui partagent les mêmes valeurs d'exigence, de sincérité et de croissance.</li>
+</ul>
+
+<h2>Prêt(e) à révéler votre vrai potentiel en vidéo ?</h2>
+
+<p>Il est temps de mettre un visage sur votre expertise et d'attirer les projets que vous méritez vraiment.</p>
+
+<p>Parlons de vos idées, de votre positionnement et de vos prochaines vidéos autour d'un échange direct :</p>
+
+<p style="text-align: center; font-weight: bold; margin-top: 2rem;">👉 <strong>byli4mpro@gmail.com</strong></p>`,
+  },
 ];
