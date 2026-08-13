@@ -424,10 +424,19 @@ export default function Home() {
         .copy-feedback.show { display: block; }
         .blog-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          grid-template-columns: repeat(4, 1fr);
           gap: 20px;
-          max-width: 700px;
+          max-width: 100%;
           margin: 0 auto;
+        }
+        @media (max-width: 1200px) {
+          .blog-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 768px) {
+          .blog-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+          .blog-grid { grid-template-columns: 1fr; }
         }
         .blog-card {
           background: #1a1a1a;
@@ -771,10 +780,10 @@ export default function Home() {
       </section>
 
       <section className="blog-section scroll-reveal" id="blog" style={{ background: 'transparent', padding: '5rem 2rem' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ maxWidth: '100%', margin: '0 auto', paddingLeft: '2rem', paddingRight: '2rem' }}>
           <h2 className="section-title">Blog</h2>
           <div className="blog-grid">
-            {articles.slice(0, 3).map((article) => (
+            {articles.map((article) => (
               <Link key={article.id} href={`/blog/${article.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div className="blog-card">
                   <img src={article.image} alt={article.title} style={{ width: '100%', height: '200px', objectFit: 'cover', borderBottom: '2px solid var(--accent)' }} />
@@ -786,6 +795,17 @@ export default function Home() {
                   </div>
                 </div>
               </Link>
+            ))}
+            {/* Placeholders pour futurs articles */}
+            {[1, 2, 3, 4].map((i) => (
+              <div key={`placeholder-${i}`} className="blog-card" style={{ opacity: 0.3, cursor: 'default' }}>
+                <div style={{ width: '100%', height: '200px', background: 'var(--bg)', borderBottom: '2px solid var(--accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '3rem' }}>?</div>
+                <div className="blog-card-content">
+                  <span className="date">À venir</span>
+                  <h3>Nouvel article</h3>
+                  <p>Contenu en cours de rédaction...</p>
+                </div>
+              </div>
             ))}
           </div>
           <div style={{ textAlign: 'center', marginTop: '40px' }}>
