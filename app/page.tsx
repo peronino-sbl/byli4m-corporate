@@ -879,14 +879,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <footer>
-        <p>BYLI4MCORPORATE</p>
-        <p>RÉALISATEUR VIDÉO & MOTION DESIGN</p>
-        <p style={{ marginTop: '1rem' }}>Basés à Lille • Mobiles en France & Europe</p>
-        <p style={{ marginTop: '1rem', fontSize: '0.9rem' }}><a href="#cgv">Conditions Générales de Vente</a></p>
-        <p style={{ fontSize: '0.85rem' }}>© 2026 Byli4mCorporate. Tous droits réservés.</p>
-      </footer>
     </div>
   );
 }
