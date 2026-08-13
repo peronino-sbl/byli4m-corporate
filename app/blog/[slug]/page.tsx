@@ -53,36 +53,38 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         .article-content {
           font-size: 1.05em;
           line-height: 1.9;
-          color: #333;
+          color: #b0b0b0;
         }
         .article-content h2 {
           font-size: 1.8em;
-          color: #0066cc;
+          color: #00d9ff;
           margin-top: 40px;
           margin-bottom: 20px;
           font-weight: 700;
-          border-bottom: 2px solid #0066cc;
+          border-bottom: 2px solid #00d9ff;
           padding-bottom: 10px;
         }
         .article-content h3 {
           font-size: 1.3em;
-          color: #333;
+          color: #fff;
           margin-top: 30px;
           margin-bottom: 15px;
           font-weight: 700;
         }
         .article-content p {
           margin-bottom: 20px;
+          color: #b0b0b0;
         }
         .article-content ul {
           margin: 20px 0 20px 30px;
+          color: #b0b0b0;
         }
         .article-content li {
           margin-bottom: 12px;
           line-height: 1.8;
         }
         .article-content strong {
-          color: #0066cc;
+          color: #fff;
           font-weight: 600;
         }
         .article-footer {
