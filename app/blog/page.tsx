@@ -34,8 +34,17 @@ export default function BlogPage() {
         }
         .articles-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          grid-template-columns: repeat(4, 1fr);
           gap: 25px;
+        }
+        @media (max-width: 1200px) {
+          .articles-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 768px) {
+          .articles-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+          .articles-grid { grid-template-columns: 1fr; }
         }
         .article-card {
           background: #1a1a1a;
@@ -126,6 +135,19 @@ export default function BlogPage() {
                 </div>
               </div>
             </Link>
+          ))}
+          {/* Placeholders pour futurs articles */}
+          {[1, 2, 3, 4, 5, 6, 7].map((i) => (
+            <div key={`placeholder-${i}`} className="article-card" style={{ opacity: 0.3, cursor: 'default' }}>
+              <div style={{ width: '100%', height: '55%', background: '#333', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem' }}>?</div>
+              <div className="article-content">
+                <div style={{ fontSize: '0.75em', color: '#666' }}>
+                  <span>À venir</span>
+                </div>
+                <h3>Nouvel article</h3>
+                <p className="article-excerpt">Contenu en cours de rédaction...</p>
+              </div>
+            </div>
           ))}
         </div>
       </div>
