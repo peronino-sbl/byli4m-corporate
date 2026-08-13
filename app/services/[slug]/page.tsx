@@ -1,10 +1,5 @@
-'use client';
-
-import { useParams } from 'next/navigation';
-
-export default function ServicePage() {
-  const params = useParams();
-  const slug = params?.slug as string || 'service';
+export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
 
   const services: { [key: string]: any } = {
     'video-immobiliere': {
